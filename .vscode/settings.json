@@ -1,0 +1,24 @@
+{
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.addMissingImports": true
+	},
+	"search.exclude": {
+		"package-lock.json": true,
+		"yarn.lock": true
+	},
+	"editor.formatOnSave": true,
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"cSpell.words": ["Backuping", "exceljs"]
+}

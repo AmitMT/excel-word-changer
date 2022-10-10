@@ -1,0 +1,68 @@
+{
+	"env": {
+		"node": true,
+		"es2021": true
+	},
+	"extends": [
+		"airbnb-base",
+		"airbnb-typescript/base",
+		"plugin:prettier/recommended",
+		"plugin:node/recommended",
+		"plugin:import/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 13,
+		"sourceType": "module",
+		"project": ["./tsconfig.json"]
+	},
+	"plugins": ["@typescript-eslint", "unused-imports"],
+	"rules": {
+		"prettier/prettier": [
+			"warn",
+			{},
+			{
+				"usePrettierrc": true
+			}
+		],
+		"no-console": "off",
+
+		"import/order": [
+			"error",
+			{
+				"groups": ["builtin", "external", "internal"],
+				"pathGroups": [
+					{
+						"pattern": "react",
+						"group": "external",
+						"position": "before"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["react"],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc",
+					"caseInsensitive": true
+				}
+			}
+		],
+		"import/prefer-default-export": "off", // Named export is easier to refactor automatically
+
+		"unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+			"error",
+			{
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"no-unused-vars": "off",
+		"node/no-unsupported-features/es-syntax": [
+			"error",
+			{
+				"version": ">=8.0.0",
+				"ignores": ["modules"]
+			}
+		],
+		"node/no-missing-import": "off"
+	}
+}

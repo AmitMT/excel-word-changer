@@ -1,0 +1,11 @@
+{
+	"file": "D:/ProgramingD/Node.js/excel-word-changer/test.xlsx",
+	"dictionary": [
+		{
+			"word": "שלום",
+			"replacement": "שלום",
+			"endings": ["ת", "ות", "ה"]
+		}
+	],
+	"endings": ["ת", "ות", "ה"]
+}
