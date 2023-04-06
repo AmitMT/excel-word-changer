@@ -24,6 +24,14 @@ const unEndingLetter = (word: string) => {
 	}
 };
 
+const markCharRepeats = (text: string) => {
+	const words = text.split(' ');
+	for (let i = 0; i < words.length; i += 1)
+		if (i > 0 && words[i][0] === unEndingLetter(words[i - 1][words[i - 1].length - 1]))
+			words[i] = `*${words[i]}`;
+	return words.join(' ');
+};
+
 const replaceWord = (text: string, word: string, replacement: string, endings: string[] = []) => {
 	return text.replace(
 		new RegExp(
@@ -71,14 +79,21 @@ const replaceWord = (text: string, word: string, replacement: string, endings: s
 		writeFile('./src/rules.json', JSON.stringify(json, null, 2));
 	} else {
 		const workbook = new ExcelJS.Workbook();
-		await workbook.xlsx.readFile(rules.file);
+
+		const file = `${rules.folder}/${
+			(await readdir(rules.folder)).find((n) => n.endsWith('.xlsx')) as string
+		}`;
+
+		await workbook.xlsx.readFile(file);
 
 		console.log('Backuping File...');
 
-		const backups = await (await readdir('./backups')).map((file) => file.slice(0, -5)).sort();
+		const backups = await (await readdir('./backups'))
+			.map((backupFile) => backupFile.slice(0, -5))
+			.sort();
 		for (let i = 0; i < backups.length - 3; i += 1) rm(`./backups/${backups[i]}.xlsx`);
 
-		await copyFile(rules.file, `./backups/${dayjs().format('YYYY-MM-DD[T]HH[h]mm[m]ss[s]')}.xlsx`);
+		await copyFile(file, `./backups/${dayjs().format('YYYY-MM-DD[T]HH[h]mm[m]ss[s]')}.xlsx`);
 
 		console.log('Working...');
 
@@ -86,6 +101,9 @@ const replaceWord = (text: string, word: string, replacement: string, endings: s
 			worksheet.eachRow((row) => {
 				row.eachCell((cell) => {
 					if (typeof cell.value === 'string') {
+						// eslint-disable-next-line no-param-reassign
+						cell.value = markCharRepeats(cell.value);
+
 						rules.dictionary.forEach((rule) => {
 							// eslint-disable-next-line no-param-reassign
 							cell.value = replaceWord(cell.value as string, rule.word, rule.replacement);
@@ -101,7 +119,7 @@ const replaceWord = (text: string, word: string, replacement: string, endings: s
 				});
 			});
 		});
-		await workbook.xlsx.writeFile(rules.file);
+		await workbook.xlsx.writeFile(file);
 
 		console.log('Done :)');
 	}

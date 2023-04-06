@@ -1,11 +1,344 @@
 {
-	"file": "D:/ProgramingD/Node.js/excel-word-changer/test.xlsx",
+	"folder": "D:/ProgramingD/Node.js/excel-word-changer/תיקיית הניקוד",
 	"dictionary": [
 		{
-			"word": "שלום",
-			"replacement": "שלום",
-			"endings": ["ת", "ות", "ה"]
+			"word": "מניח",
+			"replacement": "מַניח",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מגיע",
+			"replacement": "מַגיע",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מביט",
+			"replacement": "מַביט",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מקיף",
+			"replacement": "מַקיף",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "משיג",
+			"replacement": "מַשיג",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מציג",
+			"replacement": "מַציג",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מרים",
+			"replacement": "מֶרים",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מסיר",
+			"replacement": "מֶסיר",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מניד",
+			"replacement": "מֶניד",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מביא",
+			"replacement": "מֶביא",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מציץ",
+			"replacement": "מֶציץ",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מניף",
+			"replacement": "מֶניף",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מריע",
+			"replacement": "מֶריע",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מעיף",
+			"replacement": "מֶעיף",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מגיף",
+			"replacement": "מֶגיף",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מסית",
+			"replacement": "מֶסית",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מגיח",
+			"replacement": "מֶגיח",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מכין",
+			"replacement": "מֶכין",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "ערומ",
+			"replacement": "עֶרומ",
+			"endings": ["ות", "ה"]
+		},
+		{
+			"word": "ערומים",
+			"replacement": "עֶרוּמים"
+		},
+		{
+			"word": "לחדר",
+			"replacement": "לַחַדַר",
+			"endings": ["ים"]
+		},
+		{
+			"word": "החלק",
+			"replacement": "הֶחַלַק",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "בנעלו",
+			"replacement": "בְנַעַלוֹ"
+		},
+		{
+			"word": "רבי",
+			"replacement": "רבּי"
+		},
+		{
+			"word": "החתן",
+			"replacement": "הֶחַתַן"
+		},
+		{
+			"word": "מכנסי",
+			"replacement": "מִכְנְסֵי "
+		},
+		{
+			"word": "העשן",
+			"replacement": "הֶעַשַן"
+		},
+		{
+			"word": "תשומת",
+			"replacement": "תשומַת"
+		},
+		{
+			"word": "מסדרון",
+			"replacement": "מסדְרון"
+		},
+		{
+			"word": "בחשש",
+			"replacement": "בַּחשש",
+			"endings": ["ות"]
+		},
+		{
+			"word": "מעז",
+			"replacement": "מעֶז",
+			"endings": ["ות", "ה"]
+		},
+		{
+			"word": "ממנו",
+			"replacement": "ממנוּ"
+		},
+		{
+			"word": "בינתיים",
+			"replacement": "בּינְתיים"
+		},
+		{
+			"word": "חירבה",
+			"replacement": "חירבֶּה"
+		},
+		{
+			"word": "שעתיים",
+			"replacement": "שְעתיים"
+		},
+		{
+			"word": "אופנוע",
+			"replacement": "אוֹפָנוֹע",
+			"endings": ["ים"]
+		},
+		{
+			"word": "עשבים",
+			"replacement": "עְַשַבִים"
+		},
+		{
+			"word": "הערוך",
+			"replacement": "הֶעַרוך"
+		},
+		{
+			"word": "מקיש",
+			"replacement": "מַקִּישׁ",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "ידי",
+			"replacement": "יְדֶי"
+		},
+		{
+			"word": "דרכי",
+			"replacement": "דַּרְכֵי"
+		},
+		{
+			"word": "צבועים",
+			"replacement": "צְבוֹעִים"
+		},
+		{
+			"word": "חניון",
+			"replacement": "חַנְיוֹן"
+		},
+		{
+			"word": "תושבי",
+			"replacement": "תּוֹשָׁבֵי"
+		},
+		{
+			"word": "מראשו",
+			"replacement": "מֶראשו"
+		},
+		{
+			"word": "מתיז",
+			"replacement": "מַתיז",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "מצית",
+			"replacement": "מַצית",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "קלטות",
+			"replacement": "קַלטות"
+		},
+		{
+			"word": "מחו",
+			"replacement": "מַחַוַ",
+			"endings": ["ות", "ה"]
+		},
+		{
+			"word": "ישוב",
+			"replacement": "יִשוב",
+			"endings": ["ים"]
+		},
+		{
+			"word": "מחומרי",
+			"replacement": "מֶחומרי"
+		},
+		{
+			"word": "מחוסר",
+			"replacement": "מֶחוסר"
+		},
+		{
+			"word": "פעמית",
+			"replacement": "פַעמית"
+		},
+		{
+			"word": "שובבות",
+			"replacement": "שובֶבות"
+		},
+		{
+			"word": "אליהם",
+			"replacement": "אַליהם"
+		},
+		{
+			"word": "גבעות",
+			"replacement": "גִבְעות"
+		},
+		{
+			"word": "מראש",
+			"replacement": "מֶראש"
+		},
+		{
+			"word": "רפפות",
+			"replacement": "רְפַפות"
+		},
+		{
+			"word": "בדפנותיה",
+			"replacement": "בדוֹפנותיה"
+		},
+		{
+			"word": "קסדות",
+			"replacement": "קְסַדות"
+		},
+		{
+			"word": "הרחב",
+			"replacement": "הרְחב",
+			"endings": ["ות", "ה"]
+		},
+		{
+			"word": "מפיק",
+			"replacement": "מֶפיק",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "לוחצים",
+			"replacement": "לוחַצים"
+		},
+		{
+			"word": "לוחצות",
+			"replacement": "לוחַצות"
+		},
+		{
+			"word": "רוחצים",
+			"replacement": "רוחַצים"
+		},
+		{
+			"word": "רוחצות",
+			"replacement": "רוחַצות"
+		},
+		{
+			"word": "מסיט",
+			"replacement": "מֶסיט",
+			"endings": ["ה", "ים"]
+		},
+		{
+			"word": "מגיש",
+			"replacement": "מַגיש",
+			"endings": ["ות", "ה", "ים"]
+		},
+		{
+			"word": "דלפק",
+			"replacement": "דֶלפק"
+		},
+		{
+			"word": "משרדי",
+			"replacement": "משְרְדי"
+		},
+		{
+			"word": "קניון",
+			"replacement": "קַניון"
+		},
+		{
+			"word": "אקמול",
+			"replacement": "אַקַמול"
+		},
+		{
+			"word": "קרדיגן",
+			"replacement": "קַרדיגַן"
+		},
+		{
+			"word": "החשוך",
+			"replacement": "הֶחשוך"
+		},
+		{
+			"word": "ראווה",
+			"replacement": "רַאַוַוה"
+		},
+		{
+			"word": "מסית",
+			"replacement": "מֶסית",
+			"endings": ["ה", "ים"]
 		}
 	],
-	"endings": ["ת", "ות", "ה"]
+	"endings": ["ות", "ה", "ים"]
 }
