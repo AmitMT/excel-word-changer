@@ -27,7 +27,7 @@ const unEndingLetter = (word: string) => {
 const markCharRepeats = (text: string) => {
 	const words = text.split(' ');
 	for (let i = 0; i < words.length; i += 1)
-		if (i > 0 && words[i][0] === unEndingLetter(words[i - 1][words[i - 1].length - 1]))
+		if (i > 0 && words[i].length > 0 && words[i - 1].length > 0 && words[i][0] === unEndingLetter(words[i - 1][words[i - 1].length - 1]) && !rules.dontPutAsterix.includes(words[i][0]))
 			words[i] = `*${words[i]}`;
 	return words.join(' ');
 };
@@ -101,9 +101,6 @@ const replaceWord = (text: string, word: string, replacement: string, endings: s
 			worksheet.eachRow((row) => {
 				row.eachCell((cell) => {
 					if (typeof cell.value === 'string') {
-						// eslint-disable-next-line no-param-reassign
-						cell.value = markCharRepeats(cell.value);
-
 						rules.dictionary.forEach((rule) => {
 							// eslint-disable-next-line no-param-reassign
 							cell.value = replaceWord(cell.value as string, rule.word, rule.replacement);
@@ -115,6 +112,9 @@ const replaceWord = (text: string, word: string, replacement: string, endings: s
 								rule.endings || [],
 							);
 						});
+						
+						// eslint-disable-next-line no-param-reassign
+						cell.value = markCharRepeats(cell.value);
 					}
 				});
 			});
